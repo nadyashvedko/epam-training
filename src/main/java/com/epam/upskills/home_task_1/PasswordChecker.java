@@ -1,4 +1,4 @@
-package com.epam.upskills;
+package com.epam.upskills.home_task_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
