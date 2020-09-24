@@ -1,8 +1,8 @@
-package com.epam.upskills.home_task_5;
+package com.epam.upskills.home_taks_6;
 
 public class Multiplicator {
-    public int[] multiplicator(int[] a, int[] b) {
-        if ((a == null || b == null) && a.length != b.length) {
+    public int[] multiply(int[] a, int[] b) {
+        if ((a == null || b == null) || a.length != b.length) {
             throw new IllegalArgumentException();
         }
         int[] result = new int[a.length];

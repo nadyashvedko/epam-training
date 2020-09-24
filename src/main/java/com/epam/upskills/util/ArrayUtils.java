@@ -1,20 +1,25 @@
 package com.epam.upskills.util;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class ArrayUtils {
     public static int[] createArrayFromConsole() throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter please size of array: ");
-        int nArraySize = Integer.parseInt(reader.readLine());
+        int nArraySize = ConsoleReader.readIntLine();
         int[] numbers = new int[nArraySize];
-        System.out.println("Enter please "+ nArraySize +" numbers: ");
+        System.out.println("Enter please " + nArraySize + " numbers: ");
         for (int i = 0; i < nArraySize; i++) {
-            numbers[i] = Integer.parseInt(reader.readLine());
+            numbers[i] = ConsoleReader.readIntLine();
         }
-        reader.close();
+        return numbers;
+    }
+
+    public static int[] createArrayFromConsole(int arraySize) throws IOException {
+        int[] numbers = new int[arraySize];
+        System.out.println("Enter please " + arraySize + " numbers: ");
+        for (int i = 0; i < arraySize; i++) {
+            numbers[i] = ConsoleReader.readIntLine();
+        }
         return numbers;
     }
 }
