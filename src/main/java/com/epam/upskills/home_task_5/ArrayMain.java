@@ -36,10 +36,13 @@ public class ArrayMain {
 //            }
 //            System.out.println();
 //        }
-    int[] a = {1,4,7,3};
-    int[] b = {5,11,3,9};
+    ArrayCreator creator = new ArrayCreator();
+    int[] a = creator.fillRandomArray(7,4,10);
+    int[] b = creator.fillRandomArray(7,-5,5);
     Multiplicator multiplicator = new Multiplicator();
     int[] result = multiplicator.multiplicator(a,b);
+        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(b));
         System.out.println("result = " + Arrays.toString(result));
     }
 
